@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>nextjs-server</id>
+    <title>Next.js Server</title>
+    <version>4.2.3</version>
+    <authors>Rob Moore (@robdmoore)</authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <!--<projectUrl>todo</projectUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Site Extension that installs the necessary files to run a next.JS server - you just need to deploy your built .next folder</description>
+    <tags>nextjs server siteextension</tags>
+  </metadata>
+  <files>
+    <file src="Next.js\**\*.*" target="content" />
+  </files>
+</package>
