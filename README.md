@@ -38,5 +38,7 @@ This site extension allows you to delegate the installation of these files to th
 
 ## Todo
 
-* [Add gzip compression and HTTP2 support](https://github.com/zeit/next.js/wiki/Getting-ready-for-production)
-* See if it's possible to perform the same function without needing to copy files into `wwwroot` by instead [modifying applicationhost.config via XDT](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions)
+1. Look at adding a web job that runs npm install asynchronously to site extension  install (since currently the extension times out waiting after 60s) and drops a file on the filesystem to indicate when the install is done. Potentially change server.js to detect when that file isn't present and show the user a nice message indicating the server is starting up still.
+2. Release to the site extensions site so it can be used in Azure (currently it's there but the single package has been unlisted since it times out)
+3. [Add gzip compression and HTTP2 support](https://github.com/zeit/next.js/wiki/Getting-ready-for-production)
+4. See if it's possible to perform the same function without needing to copy files into `wwwroot` by instead [modifying applicationhost.config via XDT](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions)
